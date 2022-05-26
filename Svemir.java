@@ -10,7 +10,7 @@ public class Svemir extends Canvas implements Runnable{
 	
 	ArrayList<NebeskoTelo> lista_tela = new ArrayList<>();
  	
-	private Kometa kometa = new Kometa(150,0,Color.GRAY,15);
+	private Kometa kometa = new Kometa(150,20,Color.GRAY,15);
 	private Color lineColor = Color.BLACK;
 	private long sleepTime = 100;
 	private Thread thread;
@@ -20,19 +20,19 @@ public class Svemir extends Canvas implements Runnable{
 		this.setBackground(Color.BLACK);
 	}
 	
-	public void dodajTelo(NebeskoTelo k) {
+	public synchronized void dodajTelo(NebeskoTelo k) {
 		lista_tela.add(k);
 	}
 	
 	@Override
 	public void paint(Graphics g) {
-		kometa.crtaj(g);
-		/*for(int i=0; i<lista_tela.size(); i++) {
+		//kometa.crtaj(g);
+		for(int i=0; i<lista_tela.size(); i++) {
 	
-			 lista_tela.get(i).paint(g);
+			 lista_tela.get(i).crtaj(g);
 			 lista_tela.get(i).promeniY(5);
 			
-		}*/
+		}
 	}
 	
 	public synchronized void kreni() {

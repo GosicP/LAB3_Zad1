@@ -19,7 +19,7 @@ public abstract class Objekat {
 	public void promeniY(int pomeraj) {y+=pomeraj;}
 	
 	
-	abstract public void paint(Graphics g);
+	abstract public void crtaj(Graphics g);
 	
 	public static void main(String[] args) {
 		

@@ -21,24 +21,24 @@ public class Kometa extends NebeskoTelo {
 	}
 	
 	public void crtaj(Graphics g) {
-	/*int i=0;
+	int i=0;
 	int steps = 5;	
-	g.translate(getX(), getY());
-	double angle = 0;
+	
+	double angle = Math.random()*Math.PI*2/steps;
 	double inc = 2*Math.PI/steps;
 	g.setColor(Color.GRAY);
 	int xn[] = new int[5];
 	int yn[] = new int[5];
 	int endX, endY;
 	for (;i<5; angle+=inc, i++) {
-		endX = (int) (poluprecnik_pikseli*Math.cos(angle));
-		endY = (int) (poluprecnik_pikseli*Math.sin(angle));
-		g.drawLine(xn[i], yn[i], endX, endY);
+		endX = (int) (poluprecnik_pikseli*Math.cos(angle))+getX();
+		endY = (int) (poluprecnik_pikseli*Math.sin(angle))+getY();
+		
 		xn[i] = endX;
 		yn[i] = endY;
 	}
-		g.fillPolygon(xn, yn, 5);*/
-		double a=36./180*Math.PI;
+		g.fillPolygon(xn, yn, 5);
+		/*double a=36./180*Math.PI;
 		Color prev=g.getColor();
 		int steps = 5;	
 		double inc = 2*Math.PI/steps;
@@ -54,7 +54,7 @@ public class Kometa extends NebeskoTelo {
 			xp[i]=endX;
 			yp[i]=endY;
 			i++;
-	}
+	}*/
 
 	}
 

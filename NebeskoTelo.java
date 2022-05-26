@@ -13,6 +13,6 @@ public class NebeskoTelo extends Objekat {
 		
 	}
 
-	public void paint(Graphics g) {}
+	public void crtaj(Graphics g) {}
 
 }
