@@ -11,6 +11,7 @@ import java.awt.event.WindowEvent;
 public class Simulator extends Frame {
 	
 	
+	
 	public void populateWindow() {
 		
 		Svemir svemir = new Svemir();
@@ -39,7 +40,6 @@ public class Simulator extends Frame {
 				dispose();
 			}
 		});
-		
 	}
 	
 	public Simulator() {

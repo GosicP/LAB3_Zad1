@@ -41,14 +41,7 @@ public class Svemir extends Canvas implements Runnable{
 	}
 	
 	public synchronized void stani() {
-		if(thread != null) {
-			thread.interrupt();
-		}
-		while (thread != null) {
-			try {
-				wait();
-			} catch (InterruptedException e) {}
-		}
+		thread.interrupt();
 	}
 	
 
