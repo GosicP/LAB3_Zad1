@@ -26,6 +26,7 @@ public class Generator implements Runnable{
 		try {
 			while(!thread.interrupted()) {
 				svemir.dodajTelo(new Kometa((int)(Math.random()*200), 0, Color.GRAY, (int)(Math.random()*20+10)));
+				svemir.dodajIgraca(new Igrac());
 				thread.sleep(900); 
 			}
 		} catch (InterruptedException e) {

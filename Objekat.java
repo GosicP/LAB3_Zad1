@@ -21,7 +21,11 @@ public abstract class Objekat {
 	
 	abstract public void crtaj(Graphics g);
 	
-	public static void main(String[] args) {
-		
+	public boolean proveriPreklapanje(int x, int y) {
+		if(this.x==x && this.y==y) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }
